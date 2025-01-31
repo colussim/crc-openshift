@@ -1,11 +1,3 @@
----
-title: Deploy CodeReady Containers (crc)
-updated: 2025-01-31 14:38:08Z
-created: 2025-01-29 08:17:53Z
-latitude: 46.25140240
-longitude: 6.20229040
-altitude: 0.0000
----
 
 
 ## Introduction
