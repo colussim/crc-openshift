@@ -1,0 +1,13 @@
+spec:
+  appsDomain: apps.demos.oramysql02.com
+  componentRoutes:
+  - hostname: console-openshift-console.apps.demos.oramysql02.com
+    name: console
+    namespace: openshift-console
+    servingCertKeyPairSecret:
+      name: oramysql021-cert 
+  - hostname: oauth-openshift.apps.demos.oramysql02.com
+    name: oauth-openshift
+    namespace: openshift-authentication
+    servingCertKeyPairSecret:
+      name: oramysql021-cert 

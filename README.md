@@ -292,6 +292,31 @@ oc patch apiserver cluster --type=merge -p "{\"spec\":{\"servingCerts\": {\"name
   
 ```
 
+**📌Step 8 Patch the default openshift-authentication.**  
+```bash
+
+oc patch ingresses.config.openshift.io cluster --type=merge --patch-file=ingress-patch.yaml
+
+```
+Contents of ingress-patch.yaml : 
+```yaml
+spec:
+  appsDomain: apps.demos.oramysql02.com
+  componentRoutes:
+  - hostname: console-openshift-console.apps.demos.oramysql02.com
+    name: console
+    namespace: openshift-console
+    servingCertKeyPairSecret:
+      name: oramysql021-cert 
+  - hostname: oauth-openshift.apps.demos.oramysql02.com
+    name: oauth-openshift
+    namespace: openshift-authentication
+    servingCertKeyPairSecret:
+      name: oramysql021-cert 
+```
+
+
+
 > Since we just patched the different operators, we need to wait a few seconds for them to restart and apply the new configuration.
 
 You can check their status by running the following command:

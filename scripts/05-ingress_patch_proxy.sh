@@ -1,0 +1,1 @@
+oc patch proxy/cluster --type=merge --patch='{"spec":{"trustedCA":{"name":"oramysql021-ca"}}}' && oc patch ingresscontrollers.operator.openshift.io default --type=merge -p '{"spec":{"defaultCertificate": {"name": "oramysql021-cert"}}}' -n openshift-ingress-operator
