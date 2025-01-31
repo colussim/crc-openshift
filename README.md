@@ -316,7 +316,6 @@ spec:
 ```
 
 
-
 > Since we just patched the different operators, we need to wait a few seconds for them to restart and apply the new configuration.
 
 You can check their status by running the following command:
